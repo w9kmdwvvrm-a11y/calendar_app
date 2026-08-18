@@ -186,6 +186,21 @@ onMounted(() => {
   margin: 0 auto;
   padding: 1rem;
   font-family: sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    padding: 0.75rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-container {
+    padding: 0.5rem;
+  }
 }
 
 .calendar-header {
@@ -196,11 +211,25 @@ onMounted(() => {
   padding: 0 0.5rem;
 }
 
+@media (max-width: 480px) {
+  .calendar-header {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+}
+
 .calendar-header h2 {
   font-size: 1.3rem;
   margin: 0;
   min-width: 120px;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .calendar-header h2 {
+    font-size: 1.1rem;
+    min-width: 100px;
+  }
 }
 
 .nav-btn {
@@ -213,6 +242,13 @@ onMounted(() => {
   font-size: 1rem;
 }
 
+@media (max-width: 480px) {
+  .nav-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
 .nav-btn:active {
   background: #0056b3;
 }
@@ -222,6 +258,12 @@ onMounted(() => {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .calendar-grid {
+    margin-bottom: 1rem;
+  }
 }
 
 .weekday-header {
@@ -236,6 +278,20 @@ onMounted(() => {
   text-align: center;
   font-weight: bold;
   font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .weekday {
+    padding: 0.4rem 0.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .weekday {
+    padding: 0.3rem 0.1rem;
+    font-size: 0.75rem;
+  }
 }
 
 .calendar-dates {
@@ -254,6 +310,20 @@ onMounted(() => {
   justify-content: center;
   min-height: 60px;
   transition: background-color 0.2s;
+}
+
+@media (max-width: 768px) {
+  .calendar-date {
+    min-height: 50px;
+    padding: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-date {
+    min-height: 40px;
+    padding: 0.2rem;
+  }
 }
 
 .calendar-date:active {
@@ -279,10 +349,29 @@ onMounted(() => {
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .date-number {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-number {
+    font-size: 0.8rem;
+  }
+}
+
 .event-indicator {
   font-size: 0.7rem;
   color: #666;
   margin-top: 0.2rem;
+}
+
+@media (max-width: 480px) {
+  .event-indicator {
+    font-size: 0.6rem;
+    margin-top: 0.1rem;
+  }
 }
 
 .calendar-date.selected .event-indicator {
@@ -296,16 +385,35 @@ onMounted(() => {
   background: #f9f9f9;
 }
 
+@media (max-width: 480px) {
+  .selected-date-events {
+    padding: 0.75rem;
+  }
+}
+
 .selected-date-events h3 {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 
+@media (max-width: 480px) {
+  .selected-date-events h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
 .no-events {
   text-align: center;
   color: #999;
   padding: 1rem;
+}
+
+@media (max-width: 480px) {
+  .no-events {
+    padding: 0.75rem;
+  }
 }
 
 .event-list {
@@ -325,6 +433,17 @@ onMounted(() => {
   border-left: 3px solid #007AFF;
   cursor: pointer;
   transition: background-color 0.2s;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .event-item {
+    padding: 0.4rem;
+    margin-bottom: 0.4rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .event-item:active {
@@ -336,10 +455,24 @@ onMounted(() => {
   font-weight: 500;
 }
 
+@media (max-width: 480px) {
+  .event-title {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
 .event-time {
   color: #666;
   font-size: 0.9rem;
   margin-left: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .event-time {
+    margin-left: 0;
+    font-size: 0.85rem;
+  }
 }
 
 .add-event-btn {
@@ -352,6 +485,14 @@ onMounted(() => {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+@media (max-width: 480px) {
+  .add-event-btn {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
 }
 
 .add-event-btn:active {

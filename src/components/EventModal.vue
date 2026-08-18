@@ -268,6 +268,13 @@ watch(() => props.isOpen, () => {
   padding: 1rem;
 }
 
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 0.5rem;
+    align-items: flex-end;
+  }
+}
+
 .modal-content {
   background: white;
   border-radius: 12px;
@@ -278,6 +285,14 @@ watch(() => props.isOpen, () => {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 480px) {
+  .modal-content {
+    max-height: 95vh;
+    border-radius: 12px 12px 0 0;
+    max-width: 100%;
+  }
+}
+
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -286,9 +301,21 @@ watch(() => props.isOpen, () => {
   border-bottom: 1px solid #e0e0e0;
 }
 
+@media (max-width: 480px) {
+  .modal-header {
+    padding: 0.75rem;
+  }
+}
+
 .modal-header h2 {
   margin: 0;
   font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .modal-header h2 {
+    font-size: 1rem;
+  }
 }
 
 .close-btn {
@@ -303,6 +330,15 @@ watch(() => props.isOpen, () => {
   align-items: center;
   justify-content: center;
   color: #666;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .close-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1.3rem;
+  }
 }
 
 .close-btn:active {
@@ -313,8 +349,20 @@ watch(() => props.isOpen, () => {
   padding: 1rem;
 }
 
+@media (max-width: 480px) {
+  .event-form {
+    padding: 0.75rem;
+  }
+}
+
 .form-group {
   margin-bottom: 1rem;
+}
+
+@media (max-width: 480px) {
+  .form-group {
+    margin-bottom: 0.75rem;
+  }
 }
 
 .form-group label {
@@ -322,6 +370,12 @@ watch(() => props.isOpen, () => {
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .form-group label {
+    font-size: 0.9rem;
+  }
 }
 
 .form-input,
@@ -332,6 +386,15 @@ watch(() => props.isOpen, () => {
   border-radius: 6px;
   font-size: 1rem;
   font-family: inherit;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .form-input,
+  .form-textarea {
+    padding: 0.6rem;
+    font-size: 16px;
+  }
 }
 
 .form-input:focus,
@@ -346,6 +409,12 @@ watch(() => props.isOpen, () => {
   min-height: 80px;
 }
 
+@media (max-width: 480px) {
+  .form-textarea {
+    min-height: 70px;
+  }
+}
+
 .form-checkbox {
   margin-right: 0.5rem;
   cursor: pointer;
@@ -354,6 +423,7 @@ watch(() => props.isOpen, () => {
 .color-selector {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .color-option {
@@ -363,6 +433,14 @@ watch(() => props.isOpen, () => {
   cursor: pointer;
   border: 2px solid transparent;
   transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .color-option {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .color-option:active {
@@ -382,11 +460,26 @@ watch(() => props.isOpen, () => {
   font-size: 0.9rem;
 }
 
+@media (max-width: 480px) {
+  .error-message {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+
 .form-actions {
   display: flex;
   gap: 0.5rem;
   justify-content: flex-end;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .form-actions {
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
 }
 
 .btn {
@@ -397,6 +490,16 @@ watch(() => props.isOpen, () => {
   cursor: pointer;
   font-weight: 500;
   transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    flex: 1;
+    min-width: 80px;
+  }
 }
 
 .btn:disabled {
